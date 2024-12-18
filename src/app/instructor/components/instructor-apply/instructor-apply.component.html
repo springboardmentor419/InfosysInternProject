@@ -1,0 +1,69 @@
+
+<app-navigation-bar></app-navigation-bar>
+
+<section class="instructor-apply">
+  <div class="header">
+    <h1>Join <span class="highlight">SkillHive</span> as an Instructor</h1>
+    <p>Empower learners worldwide</p>
+  </div>
+
+  <div class="content">
+    <!-- Image Section -->
+    <div class="image-section">
+
+      <img src="assets/banner.png" alt="Apply as Instructor" />
+
+      <!-- app.component.html -->
+<!--<img [src]="imageUrl" alt="Dynamically loaded image" /> -->
+
+
+
+    </div>
+    <!-- Form Section with Dynamic Tabs -->
+    <div class="form-section">
+      <h1>Apply As Instructor</h1>
+      <p>
+        Teaching is a vital and admirable career. Select the tab below to learn more:
+      </p>
+
+      <!-- Tab Navigation -->
+      <div class="instructor-tabs">
+        <button (click)="showRequirements()" [class.active]="selectedTab === 'requirements'">
+          Instructor Requirements
+        </button>
+        <button (click)="showRules()" [class.active]="selectedTab === 'rules'">
+          Instructor Rules
+        </button>
+      </div>
+
+      <!-- Conditional Content -->
+      <div class="tab-content">
+        <!-- Requirements -->
+        <div *ngIf="selectedTab === 'requirements'">
+          
+          <ul>
+            <li><b>Educational Qualifications:</b> Undergraduate degree with teaching experience.</li>
+            <li><b>Subject Expertise:</b> Foundational knowledge in your chosen domain.</li>
+            <li><b>Teaching Skills:</b> Strong communication and presentation skills.</li>
+            <li><b>Commitment to Quality:</b> Dedication to delivering high-quality educational content.</li>
+          </ul>
+        </div>
+
+        <!-- Rules -->
+        <div *ngIf="selectedTab === 'rules'">
+          
+          <ul>
+            <li><b>Professional Conduct:</b>  Maintain respect and respond promptly to students.</li>
+            <li><b>Content Delivery:</b>  Follow schedules and deliver clear, engaging lessons.</li>
+            <li><b>Feedback and Assessment:</b> Provide constructive feedback and fair assessments.</li>
+            <li><b>Continuous Improvement:</b> Update materials and engage in training to improve teaching.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Apply Button -->
+      <button class="apply-button">Apply Now</button>
+    </div>
+  </div>
+  
+</section>
