@@ -1,0 +1,46 @@
+{
+  "instructors": [
+    {
+      "id": "e43d",
+      "fullName": "shekhar",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Physics",
+      "specialization": "Programming",
+      "degree": "bgfaedfa",
+      "certifications": "",
+      "daysAvailable": "adsfadsf",
+      "hoursAvailable": "adsfadsf",
+      "resume": "C:\\fakepath\\shekhar resume 2.0.pdf"
+    },
+    {
+      "id": "b7d4",
+      "fullName": "",
+      "contactNumber": "",
+      "email": "",
+      "experience": "",
+      "teachingDomain": "",
+      "specialization": "",
+      "degree": "",
+      "certifications": "",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "9149",
+      "fullName": "",
+      "contactNumber": "",
+      "email": "",
+      "experience": "",
+      "teachingDomain": "",
+      "specialization": "",
+      "degree": "",
+      "certifications": "",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    }
+  ]
+}

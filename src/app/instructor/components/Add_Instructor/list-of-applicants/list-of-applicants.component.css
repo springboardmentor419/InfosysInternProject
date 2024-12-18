@@ -1,0 +1,78 @@
+
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .instructor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+
+  .instructor-table td {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid rgb(218,218,218);
+    line-height: 3rem;
+  }
+  /* .instructor-table th{
+    border-radius: 20px;
+  }  */
+  .table-heading {
+    height: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFE5E1;
+    color: rgb(92, 92, 92);
+    font-size: 14px ;
+    border-radius: 20px;
+
+  }
+
+  .add-new-btn {
+
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9C4DF4;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-left: 30.5px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .add-new-btn:hover {
+    background-color: #564dbf;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #0A033C;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  
