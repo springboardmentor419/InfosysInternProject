@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+import { routes } from '../../../../../../app.routes';
 
 @Component({
   selector: 'app-registration-form',
@@ -30,12 +31,13 @@ export class RegistrationFormComponent {
   });
 
  private http = inject(HttpClient);
-
+  private router = inject(Router)
  onSubmit() {
   const formData = this.instructorForm.value;
   console.log(formData);
   this.http.post('http://localhost:3000/instructors', formData).subscribe(response => {
     console.log('Instructor application submitted:', response);
   });
+  this.router.navigate(['/successfully-submitted'])
 }
 }

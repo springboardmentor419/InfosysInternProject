@@ -1,10 +1,15 @@
 import { Routes } from '@angular/router';
 import { RegistrationFormComponent } from './instructor/components/Add_Instructor/instructor-registration/instructor-registration/registration-form/registration-form.component';
 import { ListOfApplicantsComponent } from './instructor/components/Add_Instructor/list-of-applicants/list-of-applicants.component';
+import { InstructorApplyComponent } from './instructor/components/instructor-apply/instructor-apply.component';
+import { FormsubmittedComponent } from './instructor/components/formsubmitted/formsubmitted.component';
 
 export const routes: Routes = [
-    {path:'', component:RegistrationFormComponent},
+    {path: '', component:InstructorApplyComponent},
+    {path:'form', component:RegistrationFormComponent},
     {
     path:'applicants',component:ListOfApplicantsComponent
+    },{
+    path:'successfully-submitted',component:FormsubmittedComponent
     }
 ];
