@@ -12,8 +12,8 @@
         </tr>
       </thead>
       <tbody>
-        @for(instructor of instructors; track instructor.id){
-            <tr>
+        @for(instructor of instructors; track instructor.id ){
+            <tr [ngClass]="{'shortlisted-row': instructor.status === 'Shortlisted'}">
               <td>T{{instructor.id}}</td>
               <td>{{instructor.fullName}}</td>
               <td>{{instructor.email}}</td>
@@ -23,7 +23,8 @@
               >
                 📄
               </span></td>
-              <td>
+              <td >
+                @if (instructor.status) {}
                 <div class="dropdown">
                   <button class="action-button">Shortlisted</button>
                   <div class="dropdown-content">

@@ -38,6 +38,7 @@ th {
 }
 
 td {
+  padding: 1rem;
   border-bottom: 1px solid #ddd;
   color: #2b2b2b;
 }
@@ -125,4 +126,14 @@ td {
   right: 20px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.shortlisted-row {
+  background-color: green;
+  color: white;
+}
+
+.status-text {
+  font-weight: bold;
+  color: #007BFF;
 }

@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { InstructorService } from '../../services/instructor.service';
 import { error } from 'console';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-instructor-applied',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './instructor-applied.component.html',
   styleUrl: './instructor-applied.component.css'
 })
@@ -19,7 +20,8 @@ export class InstructorAppliedComponent implements OnInit{
   
   ngOnInit(): void {
     this.instructorService.getInstructor().subscribe({
-      next:(data) =>{ this.instructors =data;
+      next:(data) =>{ 
+        this.instructors =data;
         console.log('instructors fetched', this.instructors)
       },
       error:(error)=>{

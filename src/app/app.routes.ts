@@ -13,5 +13,6 @@ export const routes: Routes = [
     },{
     path:'successfully-submitted',component:FormsubmittedComponent
     },
-    {path:'applicants-details',component: InstructorAppliedComponent}
+    {path:'applicants-details',component: InstructorAppliedComponent},
+    {path:'available-tutors',component: ListOfApplicantsComponent}
 ];

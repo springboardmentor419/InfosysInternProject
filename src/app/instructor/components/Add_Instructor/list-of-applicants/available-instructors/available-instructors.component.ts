@@ -1,14 +1,12 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-list-of-applicants',
-  standalone: true,
-  imports: [],
-  templateUrl: './list-of-applicants.component.html',
-  styleUrl: './list-of-applicants.component.css'
+  selector: 'app-available-instructors',
+  templateUrl: './available-instructors.component.html',
+  styleUrls: ['./available-instructors.component.css'],
 })
-export class ListOfApplicantsComponent implements OnInit{
+export class AvailableInstructorsComponent implements OnInit {
   instructors: any[] = [];
   loading: boolean = true;
 
