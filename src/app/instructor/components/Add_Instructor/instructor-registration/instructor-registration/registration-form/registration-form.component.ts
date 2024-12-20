@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {  HttpClientModule } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterLink, RouterModule } from '@angular/router';
-import { routes } from '../../../../../../app.routes';
+import { Router, RouterModule } from '@angular/router';
+import { InstructorService } from '../../../../../services/instructor.service';
+
 
 @Component({
   selector: 'app-registration-form',
@@ -30,14 +31,23 @@ export class RegistrationFormComponent {
 
   });
 
- private http = inject(HttpClient);
+ private instructorservice = inject(InstructorService);
   private router = inject(Router)
+
+
  onSubmit() {
   const formData = this.instructorForm.value;
   console.log(formData);
-  this.http.post('http://localhost:3000/instructors', formData).subscribe(response => {
-    console.log('Instructor application submitted:', response);
-  });
-  this.router.navigate(['/successfully-submitted'])
+
+  this.instructorservice.submitInstructorData(formData).subscribe({
+    next:(response) =>{
+      console.log('instructor application submitted', response)
+      this.router.navigate(['/successfully-submitted']);
+    },
+    error:(error) =>{
+      console.error("error submitting instructor application ", error);
+    }
+  }
+)
 }
 }
