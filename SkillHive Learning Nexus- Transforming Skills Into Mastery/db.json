@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": "5692",
+      "courseId": "1",
+      "name": "Angular Basics",
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-28",
+      "technology": "TypeScript",
+      "status": "Upcoming",
+      "instructor": "Sandeep"
+    },
+    {
+      "id": "5693",
+      "courseId": "2",
+      "name": "React Basics",
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-28",
+      "technology": "JavaScript",
+      "status": "Upcoming",
+      "instructor": "Sandeep"
+    },
+    {
+      "id": "5694",
+      "courseId": "3",
+      "name": "Vue Basics",
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-28",
+      "technology": "JavaScript",
+      "status": "Upcoming",
+      "instructor": "Sandeep"
+    }
+  ]
+}
