@@ -1,0 +1,52 @@
+{
+  "candidates": [
+    {
+      "id": "de7b",
+      "username": "khushi",
+      "email": "khushi@gmail.com",
+      "phoneNumber": "7058175881",
+      "location": "Solapur ",
+      "companyName": "walchand institute of technology",
+      "status": "Studying",
+      "specialization": "cse",
+      "gender": "Female",
+      "password": "khushi@123"
+    },
+    {
+      "id": "2948",
+      "username": "arpita",
+      "email": "arpita@gmail.com",
+      "phoneNumber": "1234567890",
+      "location": "Latur",
+      "specialization": "cse",
+      "companyName": "walchand institue of technology",
+      "gender": "Female",
+      "status": "Studying",
+      "password": "arpita@123"
+    },
+    {
+      "id": "4bc4",
+      "username": "ankita",
+      "email": "ankita@gmail.com",
+      "phoneNumber": "1234567891",
+      "location": "mumbai",
+      "specialization": "cse",
+      "companyName": "infosys",
+      "gender": "Female",
+      "status": "Working",
+      "password": "ankita@123"
+    },
+    {
+      "id": "0",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "phoneNumber": "1234567800",
+      "location": "Chennai",
+      "specialization": "IT",
+      "companyName": "TCE",
+      "gender": "Female",
+      "status": "Graduate",
+      "password": "Abc@123456"
+    }
+  ]
+}
