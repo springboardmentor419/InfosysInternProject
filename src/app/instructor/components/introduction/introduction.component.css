@@ -24,7 +24,7 @@
   
         a {
           text-decoration: none;
-          color: white;
+          color: rgb(15, 1, 1);
           font-weight: bold;
           transition: color 0.3s ease;
   
@@ -59,6 +59,6 @@
   .header img{
     margin: 0 auto;
   }
-  .instructor-apply .header .highlight {
-    color: #fc9352;
+ .highlight {
+    color: #e75050;
   }

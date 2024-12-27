@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NewsletterComponent } from '../newsletter/newsletter.component';
 
 
 @Component({

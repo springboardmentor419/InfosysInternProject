@@ -1,0 +1,49 @@
+/* Footer container setup */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;  /* Distribute sections evenly */
+    background-color: #ffffff;      /* Deep navy color */
+    color: #000000;                 /* White text color */
+    padding: 10px;                  /* Padding inside footer */
+    width: 100%;                    /* Ensure the footer spans the full width */
+    box-sizing: border-box;         /* Ensure padding doesn't affect total width */
+    font-family: 'Arial', sans-serif;
+    margin : 0 auto;               /* Fix the footer to the bottom */
+    bottom: 0;                      /* Stick to the bottom of the viewport */
+    text-align: center;
+  }
+  
+  /* Footer sections layout */
+  .footer-section {
+    flex: 1;
+    padding: 0 15px;                /* Horizontal space between sections */
+    box-sizing: border-box;         /* Ensure padding doesn't overflow */
+  }
+  
+  /* Footer title styling */
+  .footer-title {
+    color: #ff4500;                 /* Orange-red color for titles */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer link styling */
+  .footer-link {
+    color: #070000;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* List styling for links */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-list li {
+    margin-bottom: 5px;
+  }
+  

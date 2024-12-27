@@ -1,15 +1,20 @@
 .containers {
   padding: 20px;
-  /* max-width: 1000px; */
+  width: 1000px;
   margin: 0 auto;
   width: 85vw;
   background-color: #f8f8f8; /* Matches the overall page background */
 }
 
+.filter{
+  float: right;
+  margin-bottom: 20px;
+}
+
 .instructor-table {
   /* margin :80px; */
   margin: 0 auto;
-  width: 70vw;
+  width: 75vw;
   border-collapse: collapse;
   margin-top: 20px;
   background-color: #fff;
@@ -18,10 +23,10 @@
 
 .instructor-table th,
 .instructor-table td {
-  border: 1px solid #ddd; /* Matches the light border style */
+  border: 1px solid #ddd; 
   padding: 12px 16px; /* Provides consistent spacing */
   text-align: left;
-  color: #2b2b2b; /* Dark text for readability */
+  color: #2b2b2b; 
 }
 
 .instructor-table th {

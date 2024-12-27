@@ -1,16 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FilterComponent } from '../../filter/filter.component';
+import { iselectedFilters } from '../../../models/shortlisted_instrtuctor.model';
+import { match } from 'assert';
 
 @Component({
   selector: 'app-list-of-applicants',
   standalone: true,
-  imports: [],
+  imports: [FilterComponent],
   templateUrl: './list-of-applicants.component.html',
   styleUrl: './list-of-applicants.component.css'
 })
 export class ListOfApplicantsComponent implements OnInit{
+
   instructors: any[] = [];
+  filteredInstructors: any[] =[];
   loading: boolean = true;
+  filters: iselectedFilters = { ratings:[],subjects:[]};
 
   constructor(private http: HttpClient) {}
 
@@ -31,22 +37,21 @@ export class ListOfApplicantsComponent implements OnInit{
     });
   }
 
-  addInstructor() {
-    const newInstructor = {
-      id: 'new-id',
-      fullName: 'New Instructor',
-      contactNumber: '1234567890',
-      email: 'new.instructor@example.com',
-      experience: 2,
-      teachingDomain: 'Science',
-      specialization: 'Physics',
-      degree: 'BSc Physics',
-      certifications: 'Teaching Certificate',
-      daysAvailable: '30',
-      hoursAvailable: '40',
-      resume: 'C:\\fakepath\\new_instructor_resume.pdf',
-    };
-
-    this.instructors.push(newInstructor);
+  onfilterschanged(filter: iselectedFilters){
+    this.filters = filter;
+    this.applyfilters();
   }
+
+  applyfilters(){
+    this.filteredInstructors = this.instructors.filter(instructor =>{
+      const matchesRating = !this.filters.ratings.length || this.filters.ratings.some(rating =>{
+        const stars = parseInt(rating.split('-')[0],10);
+        return instructor.instructorRating >= stars;
+      });
+      const matchesSubject = !this.filters.subjects.length || this.filters.subjects.includes(instructor.teachingDomain);
+
+      return matchesRating && matchesSubject;
+    })
+}
+
 }
