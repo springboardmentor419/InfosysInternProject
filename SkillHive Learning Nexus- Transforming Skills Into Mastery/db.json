@@ -18,17 +18,7 @@
       "endDate": "2024-12-28",
       "technology": "JavaScript",
       "status": "Upcoming",
-      "instructor": "Sandeep"
-    },
-    {
-      "id": "5694",
-      "courseId": "3",
-      "name": "Vue Basics",
-      "startDate": "2024-12-21",
-      "endDate": "2024-12-28",
-      "technology": "JavaScript",
-      "status": "Upcoming",
-      "instructor": "Sandeep"
+      "instructor": "Rabin"
     }
   ]
 }
