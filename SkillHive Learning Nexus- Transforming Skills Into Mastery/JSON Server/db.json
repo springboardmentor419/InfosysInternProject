@@ -1,6 +1,9 @@
 {
-  "admin":[],
+  "admins":[],
   "instructors":[],
   "candidates":[],
   "courses":[],
+  "applicantDetails":[],
+  "instructorDetails":[],
+  "additionalDetails_Candidates":[]
 }
