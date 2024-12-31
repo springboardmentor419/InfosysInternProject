@@ -1,3 +1,6 @@
+
+
+
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
@@ -12,4 +15,6 @@ export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(), provideAnimationsAsync(),
   provideHttpClient(withFetch()), provideAnimations(), 
   provideToastr({ closeButton: true, timeOut: 2500, progressBar: true, preventDuplicates: true,})]
+
 };
+

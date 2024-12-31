@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+
 import { RegistrationFormComponent } from './instructor/components/Add_Instructor/instructor-registration/instructor-registration/registration-form/registration-form.component';
 import { ListOfApplicantsComponent } from './instructor/components/Add_Instructor/list-of-applicants/list-of-applicants.component';
 import { InstructorApplyComponent } from './instructor/components/instructor-apply/instructor-apply.component';
@@ -11,6 +12,11 @@ import { AdminComponent } from './authentication/components/admin/admin.componen
 import { InstructorComponent } from './authentication/components/instructor/instructor.component';
 import { CandidateComponent } from './authentication/components/candidate/candidate.component';
 import { routeGuard } from './authentication/guard/auth.guard';
+import { CandidateLoginComponent } from './candidates/components/candidate-login/candidate-login.component';
+import { CandidateRegistrationComponent } from './candidates/components/candidate-registration/candidate-registration.component';
+import { CandidateDashboardComponent } from './candidates/components/candidate-dashboard/candidate-dashboard.component';
+import { UpdateProfileComponent } from './candidates/components/update-profile/update-profile.component';
+import { ChangePasswordComponent } from './candidates/components/change-password/change-password.component';
 
 
 export const routes: Routes = [
@@ -31,6 +37,14 @@ export const routes: Routes = [
     { path: 'instructor', component:  InstructorComponent, canActivate:[routeGuard] },
 //  { path: '', redirectTo: 'login', pathMatch: 'full' },
 //  { path: '**', redirectTo: 'login', },
+    
+//    { path: '', redirectTo: '/register', pathMatch: 'full' },
+  { path: 'login', component: CandidateLoginComponent },
+  { path: 'register', component: CandidateRegistrationComponent },
+  { path: 'change-password', component: ChangePasswordComponent },
+  { path: 'dashboard', component: CandidateDashboardComponent },
+  { path: 'update-profile', component: UpdateProfileComponent }
 ];
+
 
 
