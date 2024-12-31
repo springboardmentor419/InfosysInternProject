@@ -1,0 +1,238 @@
+{
+  "candidates": [
+      {
+        "id": "b5f2",
+        "fullName": "Bhanu Pratap Singh",
+        "email": "bhanusingh09@gmail.com",
+        "password": "BhanuPS09"
+      },
+      {
+        "id": "0fff",
+        "fullName": "Manoj",
+        "email": "manoj10@gmail.com",
+        "password": "Manoj10"
+      },
+      {
+        "id": "4457",
+        "fullName": "Akshari",
+        "email": "akshari10@gmail.com",
+        "password": "Akshari10"
+      },
+      {
+        "id": "1f51",
+        "fullName": "Aniketh",
+        "email": "aniketh10@gmail.com",
+        "password": "Aniketh10"
+      },
+    ],
+    "admins": [
+      {
+        "id": "864f",
+        "fullName": "Admin",
+        "email": "admin10@gmail.com",
+        "password": "Admin10"
+      }
+    ],
+    "instructors": [
+      {
+        "id": "4225",
+        "fullName": "Instructor1",
+        "email": "instructor01@gmail.com",
+        "password": "Instructor10"
+      },
+      {
+        "id": "6db2",
+        "fullName": "Instructor2",
+        "email": "instructor02@gmail.com",
+        "password": "Instructor10"
+      }
+    ],
+    "courses": [
+    {
+      "id": "5692",
+      "courseId": "1",
+      "name": "Angular Basics",
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-28",
+      "technology": "TypeScript",
+      "status": "Upcoming",
+      "instructor": "Sandeep"
+    },
+    {
+      "id": "5693",
+      "courseId": "2",
+      "name": "React Basics",
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-28",
+      "technology": "JavaScript",
+      "status": "Upcoming",
+      "instructor": "Rabin"
+    }
+  ],
+  "applicantDetails": [
+    {
+      "id": "703c",
+      "fullName": "karna",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Mathematics",
+      "specialization": "Programming",
+      "degree": "dfa",
+      "certifications": "adsfadsf",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "e29d",
+      "fullName": "shyam",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 2,
+      "teachingDomain": "Computer Science",
+      "specialization": "Data Structures",
+      "degree": "M Tech - CSE",
+      "certifications": " SAP cloud computing",
+      "daysAvailable": "45",
+      "hoursAvailable": "1024",
+      "resume": null
+    },
+    {
+      "id": "ef31",
+      "fullName": "",
+      "contactNumber": "",
+      "email": "",
+      "experience": "",
+      "teachingDomain": "",
+      "specialization": "",
+      "degree": "",
+      "certifications": "",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "f9b2",
+      "fullName": "karna",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Mathematics",
+      "specialization": "Programming",
+      "degree": "dfa",
+      "certifications": "adsfadsf",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    }
+  ],
+  "instructorDetails": [
+    {
+      "id": "703c",
+      "fullName": "karna",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Mathematics",
+      "specialization": "Programming",
+      "degree": "dfa",
+      "certifications": "adsfadsf",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "2a4c",
+      "fullName": "ram",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Mathematics",
+      "specialization": "Programming",
+      "degree": "bgfaedfa",
+      "certifications": "adsfadsf",
+      "daysAvailable": "45",
+      "hoursAvailable": "46",
+      "resume": "C:\\fakepath\\shekhar resume 2.0.pdf"
+    },
+    {
+      "id": "e29d",
+      "fullName": "shyam",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 2,
+      "teachingDomain": "Computer Science",
+      "specialization": "Data Structures",
+      "degree": "M Tech - CSE",
+      "certifications": " SAP cloud computing",
+      "daysAvailable": "45",
+      "hoursAvailable": "1024",
+      "resume": null
+    },
+    {
+      "id": "ef31",
+      "fullName": "",
+      "contactNumber": "",
+      "email": "",
+      "experience": "",
+      "teachingDomain": "",
+      "specialization": "",
+      "degree": "",
+      "certifications": "",
+      "daysAvailable": "",
+      "hoursAvailable": "",
+      "resume": null
+    }
+  ],
+"additionalDetails_Candidates": [
+    {
+      "id": "de7b",
+      "username": "khushi",
+      "email": "khushi@gmail.com",
+      "phoneNumber": "7058175881",
+      "location": "Solapur ",
+      "companyName": "walchand institute of technology",
+      "status": "Studying",
+      "specialization": "cse",
+      "gender": "Female",
+      "password": "khushi@123"
+    },
+    {
+      "id": "2948",
+      "username": "arpita",
+      "email": "arpita@gmail.com",
+      "phoneNumber": "1234567890",
+      "location": "Latur",
+      "specialization": "cse",
+      "companyName": "walchand institue of technology",
+      "gender": "Female",
+      "status": "Studying",
+      "password": "arpita@123"
+    },
+    {
+      "id": "4bc4",
+      "username": "ankita",
+      "email": "ankita@gmail.com",
+      "phoneNumber": "1234567891",
+      "location": "mumbai",
+      "specialization": "cse",
+      "companyName": "infosys",
+      "gender": "Female",
+      "status": "Working",
+      "password": "ankita@123"
+    },
+    {
+      "id": "0",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "phoneNumber": "1234567800",
+      "location": "Chennai",
+      "specialization": "IT",
+      "companyName": "TCE",
+      "gender": "Female",
+      "status": "Graduate",
+      "password": "Abc@123456"
+    }
+  ],  
+ }
