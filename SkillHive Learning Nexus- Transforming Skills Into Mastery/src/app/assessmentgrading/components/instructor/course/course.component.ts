@@ -31,14 +31,15 @@ export class CourseComponent implements OnInit{
   constructor(private CourseService: CourseService , private router: Router , private dialog: MatDialog) { }
 
   isScheduled(assessment : any):string{
+    console.log("button clicked")
     if(assessment?.schedule?.isScheduled){
-      return 'scheduled'
+      return 'update'
     }
     else
     return 'schedule'
   }
 
-  openDialog(assessmentName : string , createdAt : string ,assessmentID : string ,length : number): void {
+  openDialog(assessmentName : string , createdAt : string ,assessmentID : string ,length : number , isScheduled : boolean , scheduledDetails : any): void {
     const dialogRef = this.dialog.open(ScheduleAssessmentComponent, {
       width: '600px',
       data: { title: this.selectedCourse?.title ,
@@ -46,7 +47,9 @@ export class CourseComponent implements OnInit{
           createdAt : createdAt,
           courseId : this.selectedCourse?.courseId,
           assessmentID : assessmentID,
-          totalQuestions : length
+          totalQuestions : length,
+          isScheduled : isScheduled,
+          scheduledDetails : scheduledDetails
        }
     });
 

@@ -28,3 +28,23 @@ export interface Course {
     answer: string;
   }
   
+  export interface User {
+    name: string;
+    userId: number;
+    entrolledCourses: EntrolledCourses[];
+  }
+
+  export interface EntrolledCourses{
+
+      title: string ;
+      createdAt: string ;
+      instructorId: number;
+      courseId: number;
+      entrolled: string ;
+      assessmentData: AssessmentData[]
+    
+  }
+
+  export interface AssessmentData{
+
+  }

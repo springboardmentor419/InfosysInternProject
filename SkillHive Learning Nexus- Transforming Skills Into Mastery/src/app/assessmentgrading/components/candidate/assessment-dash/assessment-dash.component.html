@@ -1,15 +1,14 @@
-
 <div class="flex">
 
     <div class="child w-64 border-r-2 border-gray-700">
       
        <div class="border-b-2 border-gray-300 flex justify-center items-center py-2 font-medium">
-        Courses
+        Entrolled Courses
        </div>
 
        <div 
        class="p-1 px-2 border-b py-2 hover:bg-gray-300" 
-       *ngFor="let course of courses"
+       *ngFor="let course of user?.entrolledCourses"
        [ngClass]="{'bg-gray-200' :course.courseId === selectedCourse?.courseId}"
        (click)="courseSelected(course)"
        >
@@ -39,48 +38,50 @@
             <thead>
               <tr>
                 <th>Assessment Name</th>
-                <th>Created Date</th>
-                <th>Schedule</th>
-                <th>Delete</th>
+                <th>Date of Assessment</th>
+                <th>Time Start</th>
+                <th>Time End</th>
+                <th>Attempt</th>
+                <th>Review</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let assessment of selectedCourse?.assessment" class="">
+              <tr *ngFor="let assessment of candidateAssessment" class="">
                 <td>{{assessment.assessmentName}}</td>
-                <td>{{assessment.createdAt | date: 'dd-MM-yyyy'}}</td>
+                <td>{{assessment.scheduledDetails.assessmentDate | date: 'dd-MM-yyyy'}}</td>
                 <td>
-                  <button
-                  (click)="openDialog(assessment.assessmentName , assessment.createdAt , assessment.assessmentID , assessment.questions.length , assessment.schedule.isScheduled , assessment.schedule.scheduledDetails)"
-                  class="rounded-lg bg-green-400 px-3 py-1 text-white hover:bg-green-500"
-                  [ngClass]="{'bg-green-400 hover:bg-green-500'  : !assessment.schedule?.isScheduled,'bg-blue-400 hover:bg-blue-500' : assessment.schedule?.isScheduled}"
-                  >
-                    {{isScheduled(assessment)}}
-                  </button>
+                  {{assessment.scheduledDetails.startTime  }}
+                </td>
+                <td>
+                  {{assessment.scheduledDetails.endTime  }}
                 </td>
                 <td>
                   <button
-                  class="rounded-lg bg-red-400 px-3 py-1 text-white hover:bg-red-500"
-                  (click)="delAssessment(assessment.assessmentID)"
+                  class="bg-green-400 rounded-lg text-white py-1 px-2"
+                  [disabled]="!assessment.isActive"
+                  [ngClass]="{ 'bg-green-400 hover:bg-green-500' : assessment.isActive , 'bg-green-600' : !assessment.isActive}"
+                  (click)="attemptAssessment(assessment.assessmentID)"
                   >
-                    delete
+                    Attempt
+                  </button>
+                </td>
+                <td class="">
+                  <button
+                  (click)="reviewAssessment(assessment.assessmentID)"
+                  class="text-blue-600 hover:bg-blue-400 hover:rounded-lg hover:text-white py-1 px-2"
+                  >
+                    review
                   </button>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="w-full flex justify-center">
-          <button
-          (click)="goToAssessment()"
-           class=" my-4 bg-green-400 rounded-full py-1 px-3 text-white hover:bg-green-500">
-            New Assessment
-        </button>
-        </div>
+        
     </div>
 
   
 </div>
-
 
 
 

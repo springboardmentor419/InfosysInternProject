@@ -31,7 +31,9 @@ export class ScheduleAssessmentComponent implements OnInit{
       createdAt : string ,
       courseId : number ,
       assessmentID : string,
-      totalQuestions : number
+      totalQuestions : number,
+      isScheduled : boolean,
+      scheduledDetails : any
     }
   ) { }
 
