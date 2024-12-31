@@ -1,4 +1,7 @@
 {
+  "admins": [],
+  "instructors": [],
+  "candidates": [],
   "courses": [
     {
       "id": "5692",
@@ -20,5 +23,8 @@
       "status": "Upcoming",
       "instructor": "Rabin"
     }
-  ]
+  ],
+  "applicantDetails": [],
+  "instructorDetails": [],
+  "additionalDetails_Candidates": []
 }
