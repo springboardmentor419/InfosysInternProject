@@ -9,8 +9,8 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class CourseService {
 
-  private apiUrl = 'http://localhost:3000/course';
-  private apiUrlCandidate = 'http://localhost:3000/candidates';
+  private apiUrl = 'http://localhost:3000/test_course';
+  private apiUrlCandidate = 'http://localhost:3000/test_candidates';
 
   constructor(private http: HttpClient) { }
 
