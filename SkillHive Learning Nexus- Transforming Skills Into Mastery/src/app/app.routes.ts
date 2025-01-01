@@ -17,6 +17,8 @@ import { CandidateRegistrationComponent } from './candidates/components/candidat
 import { CandidateDashboardComponent } from './candidates/components/candidate-dashboard/candidate-dashboard.component';
 import { UpdateProfileComponent } from './candidates/components/update-profile/update-profile.component';
 import { ChangePasswordComponent } from './candidates/components/change-password/change-password.component';
+import { AdminCreateCourseComponent } from './course/components/admin-create-course/admin-create-course.component';
+import { AdminViewCoursesComponent } from './course/components/admin-view-courses/admin-view-courses.component';
 
 
 export const routes: Routes = [
@@ -43,7 +45,11 @@ export const routes: Routes = [
   { path: 'register', component: CandidateRegistrationComponent },
   { path: 'change-password', component: ChangePasswordComponent },
   { path: 'dashboard', component: CandidateDashboardComponent },
-  { path: 'update-profile', component: UpdateProfileComponent }
+  { path: 'update-profile', component: UpdateProfileComponent },
+  // { path: '', redirectTo: 'view-courses', pathMatch: 'full' },
+  { path: 'create-course', component: AdminCreateCourseComponent },
+  { path: 'view-courses', component: AdminViewCoursesComponent }
+
 ];
 
 
