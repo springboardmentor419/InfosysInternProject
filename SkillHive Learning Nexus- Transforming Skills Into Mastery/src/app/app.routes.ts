@@ -24,13 +24,11 @@ import { AdminViewCoursesComponent } from './course/components/admin-view-course
 export const routes: Routes = [
 //  {path: '', component:InstructorApplyComponent},
     {path:'form', component:RegistrationFormComponent},
-    {
-    path:'applicants',component:ListOfApplicantsComponent
-    },{
-    path:'successfully-submitted',component:FormsubmittedComponent
-    },
+    {path:'applicants',component:ListOfApplicantsComponent},
+    {path:'successfully-submitted',component:FormsubmittedComponent},
     {path:'applicants-details',component: InstructorAppliedComponent},
     {path:'available-tutors',component: ListOfApplicantsComponent},
+    
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'apply', component: ApplyComponent },
@@ -40,12 +38,13 @@ export const routes: Routes = [
 //  { path: '', redirectTo: 'login', pathMatch: 'full' },
 //  { path: '**', redirectTo: 'login', },
     
-//    { path: '', redirectTo: '/register', pathMatch: 'full' },
+// { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'login', component: CandidateLoginComponent },
   { path: 'register', component: CandidateRegistrationComponent },
   { path: 'change-password', component: ChangePasswordComponent },
   { path: 'dashboard', component: CandidateDashboardComponent },
   { path: 'update-profile', component: UpdateProfileComponent },
+    
   // { path: '', redirectTo: 'view-courses', pathMatch: 'full' },
   { path: 'create-course', component: AdminCreateCourseComponent },
   { path: 'view-courses', component: AdminViewCoursesComponent }
