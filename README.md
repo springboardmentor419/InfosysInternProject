@@ -1,4 +1,5 @@
 # InfosysInternProject
-# After completing your sprint1 activities, inform your Project Mentor 
+# ** Sprint2 Instructions **
+# modules were merged into the main branch for your code reference
+# After completing your sprint2 activities, inform your Project Mentor 
 # Don't push into the respective branches before Project Mentor Approval
-# for sprint1, all teams can follow different UI, finally the best of all UI's would be followed.
