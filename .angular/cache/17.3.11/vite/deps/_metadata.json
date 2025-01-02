@@ -1,43 +1,49 @@
 {
-  "hash": "4003a400",
-  "configHash": "5ea99b2f",
-  "lockfileHash": "8ee225c5",
-  "browserHash": "66b307a2",
+  "hash": "feb4941b",
+  "configHash": "781773f3",
+  "lockfileHash": "b9b25c66",
+  "browserHash": "9c000036",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "af0fafd4",
+      "fileHash": "323fadc0",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "acbb9b51",
+      "fileHash": "10692809",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "abb5c60f",
+      "fileHash": "bf416f49",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "65c55c02",
+      "fileHash": "febf2cbf",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "d913e70b",
+      "fileHash": "d4f65bdb",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "8900acb3",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "1bb01c87",
+      "fileHash": "b3cf3ed3",
       "needsInterop": false
     }
   },
@@ -47,6 +53,9 @@
     },
     "chunk-WSPQLYWX": {
       "file": "chunk-WSPQLYWX.js"
+    },
+    "browser-YREQILC4": {
+      "file": "browser-YREQILC4.js"
     },
     "chunk-2ZB3YMSJ": {
       "file": "chunk-2ZB3YMSJ.js"

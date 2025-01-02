@@ -9,7 +9,7 @@ export class InstructorService {
 
   private http = inject(HttpClient)
 
-  private apiurl = 'http://localhost:3000/instructors';
+  private apiurl = 'http://localhost:3000/applicantDetails';
 
   //post applicant in database
   submitInstructorData(formData:any):Observable<any>{
@@ -27,7 +27,12 @@ export class InstructorService {
   }
 
   addToShortlisted(instructor: any): Observable<any> {
-    const url = 'http://localhost:3000/shorlistedInstructors'; 
+    const url = 'http://localhost:3000/instructorDetails'; 
     return this.http.post<any>(url, instructor);
+  }
+
+  //deletet the shorlisted instructor
+  deleteShortlistedInstructor(id: string): Observable<void>{
+    return this.http.delete<void>(`http://localhost:3000/instructorDetails/${id}`)
   }
 }

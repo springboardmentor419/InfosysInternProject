@@ -25,7 +25,7 @@
 .instructor-table td {
   border: 1px solid #ddd; 
   padding: 12px 16px; /* Provides consistent spacing */
-  text-align: left;
+  text-align: center;
   color: #2b2b2b; 
 }
 
@@ -55,4 +55,8 @@
 
 .add-button:hover {
   background-color: #5d0f91; /* Darker purple for hover effect */
+}
+
+.Instructor-Profiles{
+  text-decoration: none;
 }

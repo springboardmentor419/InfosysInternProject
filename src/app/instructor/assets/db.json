@@ -1,5 +1,5 @@
 {
-  "instructors": [
+  "applicantDetails": [
     {
       "id": "e29d",
       "fullName": "shyam",
@@ -41,80 +41,51 @@
       "daysAvailable": "45",
       "hoursAvailable": "",
       "resume": null
+    },
+    {
+      "id": "4572",
+      "fullName": "brijesh rao",
+      "contactNumber": "1234567891",
+      "email": "example@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Web Development",
+      "specialization": "Programming",
+      "degree": "M Tech - CSE",
+      "certifications": "web devlopement",
+      "daysAvailable": "45",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "a947",
+      "fullName": "sumit",
+      "contactNumber": "08868817364",
+      "email": "demo@gmail.com",
+      "experience": 1,
+      "teachingDomain": "Web Development",
+      "specialization": "Programming",
+      "degree": "M Tech - CSE",
+      "certifications": "web devlopement",
+      "daysAvailable": "45",
+      "hoursAvailable": "",
+      "resume": null
+    },
+    {
+      "id": "86b3",
+      "fullName": "shekhar jugtwan",
+      "contactNumber": "08868817364",
+      "email": "shekharjugtwan2002@gmail.com",
+      "experience": 1,
+      "teachingDomain": "AI ML",
+      "specialization": "Algebra",
+      "degree": "M Tech - CSE",
+      "certifications": "web devlopement",
+      "daysAvailable": "45",
+      "hoursAvailable": "",
+      "resume": null
     }
   ],
-  "shorlistedInstructors": [
-    {
-      "id": "84af",
-      "fullName": "shyam",
-      "teachingDomain": "Computer Science",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 5
-    },
-    {
-      "id": "244a",
-      "fullName": "shekhar jugtwan",
-      "teachingDomain": "Computer Science",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 3
-    },
-    {
-      "id": "245a",
-      "fullName": "shekhar jugtwan",
-      "teachingDomain": "Computer Science",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4
-    },
-    {
-      "id": "246a",
-      "fullName": "shekhar jugtwan",
-      "teachingDomain": "Computer Science",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 2.5
-    },
-    {
-      "id": "247a",
-      "fullName": "shekhar jugtwan",
-      "teachingDomain": "Computer Science",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 3.5
-    },
-    {
-      "id": "e9a2",
-      "fullName": "ramkumar",
-      "teachingDomain": "Mathematics",
-      "upcoming_courses": "Web Development",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4.5
-    }
-    ,
-    {
-      "id": "e9a2",
-      "fullName": "danish",
-      "teachingDomain": "Cloud Computing",
-      "upcoming_courses": "Cloud Computing",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4.5
-    },
+  "instructorDetails": [
     {
       "id": "e9a2",
       "fullName": "john",
@@ -124,6 +95,45 @@
       "end_date": "24-10-14",
       "candidateEnrolled": 47,
       "instructorRating": 4.5
+    },
+    {
+      "id": "f168",
+      "fullName": "brijesh rao",
+      "teachingDomain": "Web Development",
+      "upcoming_courses": "Angular complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "2c6e",
+      "fullName": "sumit",
+      "teachingDomain": "Web Development",
+      "upcoming_courses": "Angular complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "8104",
+      "fullName": "shekhar jugtwan",
+      "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    }
+  ],
+  "courses": [
+    {
+      "id": "3301",
+      "courseName": "Git",
+      "courseCode": "G101",
+      "schedule": "July 1 - July 10",
+      "status": "Upcoming"
     }
   ]
 }

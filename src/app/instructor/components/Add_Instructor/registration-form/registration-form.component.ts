@@ -3,7 +3,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { InstructorService } from '../../../../../services/instructor.service';
+import { InstructorService } from '../../../services/instructor.service';
+
 
 @Component({
   selector: 'app-registration-form',

@@ -17,6 +17,7 @@ export class FilterComponent {
   subjects: string[] = ['Web Development', 'AI ML', 'Cloud Computing', 'DevOps'];
 
   @Output() filtersChanged = new EventEmitter<iselectedFilters>();
+  @Output() searchQueryChanged = new EventEmitter<string>();
 
   toggleDropdown(event: Event): void {
     event.stopPropagation();
@@ -37,4 +38,8 @@ export class FilterComponent {
     this.dropdownVisible = false;
     this.filtersChanged.emit(this.selectedFilters);
   }
+
+  onSearchChange(){
+    this.searchQueryChanged.emit(this.searchQuery.trim())
+;  }
 }
