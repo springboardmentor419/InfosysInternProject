@@ -58,6 +58,14 @@ export class RegistrationFormComponent {
     return errors;
   }
 
+  onCancel() {
+    const confirmation = confirm('Are you sure you want to cancel? Your changes will not be saved.');
+    if (confirmation) {
+      this.router.navigate(['/']); // Navigates to the home page
+    }
+  }
+  
+
   onSubmit() {
     const formData = this.instructorForm.value;
     const errors = this.validateFormData(formData);
@@ -94,3 +102,4 @@ export class RegistrationFormComponent {
     });
   }
 }
+

@@ -7,32 +7,44 @@ import { Observable } from 'rxjs';
 })
 export class InstructorService {
 
-  private http = inject(HttpClient)
+  private http = inject(HttpClient);
 
-  private apiurl = 'http://localhost:3000/applicantDetails';
+  private apiurl = 'http://localhost:3000/applicantDetails'; // API URL for applicants
+  private shortlistedUrl = 'http://localhost:3000/instructorDetails'; // API URL for shortlisted instructors
 
-  //post applicant in database
-  submitInstructorData(formData:any):Observable<any>{
+  // Post applicant in database
+  submitInstructorData(formData: any): Observable<any> {
     return this.http.post(this.apiurl, formData);
   }
   
-  //get applicants form the database
-  getInstructor():Observable<any[]>{
-    return this.http.get<any[]>(this.apiurl)
+  // Get applicants from the database
+  getInstructor(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiurl);
   }
 
-  // delete the instructor
+  // Delete the instructor
   deleteInstructor(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiurl}/${id}`);
   }
 
-  addToShortlisted(instructor: any): Observable<any> {
-    const url = 'http://localhost:3000/instructorDetails'; 
-    return this.http.post<any>(url, instructor);
+  // Get shortlisted instructors to check for duplicates
+  getShortlistedInstructors(): Observable<any[]> {
+    return this.http.get<any[]>(this.shortlistedUrl);
   }
 
-  //deletet the shorlisted instructor
-  deleteShortlistedInstructor(id: string): Observable<void>{
-    return this.http.delete<void>(`http://localhost:3000/instructorDetails/${id}`)
+  // Add to Shortlisted
+  addToShortlisted(instructor: any): Observable<any> {
+    return this.http.post<any>(this.shortlistedUrl, instructor);
+  }
+
+  // Delete the shortlisted instructor
+  deleteShortlistedInstructor(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.shortlistedUrl}/${id}`);
+  }
+
+  // Update Instructor Status (New Method)
+  updateInstructorStatus(id: number, status: string): Observable<any> {
+    const url = `${this.shortlistedUrl}/${id}`;
+    return this.http.patch(url, { status });  // Update only the status field
   }
 }
