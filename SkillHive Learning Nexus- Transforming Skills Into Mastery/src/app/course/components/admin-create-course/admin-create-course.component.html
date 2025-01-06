@@ -29,7 +29,8 @@
     [(ngModel)]="course.startDate" 
     name="startDate" 
     required 
-    #startDate="ngModel" />
+    #startDate="ngModel" 
+    (change)="updateStatus()"/>
   <div *ngIf="startDate.invalid && startDate.touched" class="error">
     Start Date is required.
   </div>
@@ -41,7 +42,8 @@
     [(ngModel)]="course.endDate" 
     name="endDate" 
     required 
-    #endDate="ngModel" />
+    #endDate="ngModel" 
+    (change)="updateStatus()"/>
   <div *ngIf="endDate.invalid && endDate.touched" class="error">
     End Date is required.
   </div>
@@ -58,19 +60,13 @@
   </div>
 
   <label for="status">Status:</label>
-  <select 
+  <input 
     id="status" 
     [(ngModel)]="course.status" 
     name="status" 
-    required 
-    #status="ngModel">
-    <option value="" disabled selected>Select status</option>
-    <option value="Ongoing">Ongoing</option>
-    <option value="Upcoming">Upcoming</option>
-    <option value="Past">Past</option>
-  </select>
-  <div *ngIf="status.invalid && status.touched" class="error">
-    Status is required.
+    disabled />
+  <div class="info">
+    Status is auto-calculated based on dates.
   </div>
 
   <label for="instructor">Instructor (Optional):</label>
