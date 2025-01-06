@@ -1,4 +1,4 @@
-import { Component,signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
@@ -15,18 +15,21 @@ import { OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { recoverPasswordService } from '../../services/recoverpassword.service';
+import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatCardModule, MatButtonModule, ReactiveFormsModule, 
-    MatIconModule, MatSelectModule, RouterLink],
+  imports: [MatFormFieldModule, MatInputModule, MatCardModule, MatButtonModule, ReactiveFormsModule,
+    MatIconModule, MatSelectModule, RouterLink, HeaderComponent, FooterComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private toastr: ToastrService, private authService:AuthService, private router:Router ){}
+  constructor(private toastr: ToastrService, private authService: AuthService, private router: Router, private recoverPasswordService: recoverPasswordService) { }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
       user: new FormControl('', [Validators.required]),
@@ -46,20 +49,18 @@ export class LoginComponent implements OnInit {
     this.authService.getUserDetails(email, password, user).subscribe({
       next: (response) => {
         if (response.length >= 1) {
-          if (user == "admin") {
-            this.router.navigate(['admin']);
-          } else if (user == "candidate") {
-            this.router.navigate(['candidate']);
-          } else {
-            this.router.navigate(['instructor']);
-          }
+          this.router.navigate(['admin']);
         } else {
-          this.toastr.error('Email or Password is wrong','Wrong Credentials');
+          this.toastr.error('Email or Password is wrong', 'Wrong Credentials');
         }
       },
       error: (err) => {
-        this.toastr.error('Something went wrong','Error');
+        this.toastr.error('Something went wrong', 'Error');
       },
     });
+  }
+
+  openPopup() {
+    this.recoverPasswordService.openPopup();
   }
 }

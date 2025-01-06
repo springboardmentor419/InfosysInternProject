@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,8 +13,9 @@ import { Router} from '@angular/router';
 })
 export class HeaderComponent {
   private router = inject(Router);
-  instructorApply() {
-    this.router.navigate(['apply']);
+
+  signUp() {
+    this.router.navigate(['signup']);
   }
 }
 

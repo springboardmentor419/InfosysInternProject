@@ -18,12 +18,14 @@ import { confirmPasswordValidator } from '../../../shared/confirm-password.valid
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatCardModule, MatButtonModule, ReactiveFormsModule, MatIconModule, 
-    MatSelectModule, CommonModule, RouterLink],
+  imports: [MatFormFieldModule, MatInputModule, MatCardModule, MatButtonModule, ReactiveFormsModule, MatIconModule,
+    MatSelectModule, CommonModule, RouterLink, HeaderComponent, FooterComponent],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
@@ -32,7 +34,7 @@ export class SignupComponent implements OnInit {
   hidePassword = signal(true);
   hideConfirmPassword = signal(true);
 
-  constructor(private toastr: ToastrService, private registerService: AuthService, private authService: AuthService) { }
+  constructor(private toastr: ToastrService, private authService: AuthService) { }
   
   ngOnInit(): void {
     this.signupForm = new FormGroup({
@@ -47,12 +49,12 @@ export class SignupComponent implements OnInit {
     const userData = { ...this.signupForm.value };
     delete userData.confirmPassword;
     const { email} = this.signupForm.value;
-    this.authService.userAlreadyPresent(email, 'candidate').subscribe({
+    this.authService.userAlreadyPresent(email).subscribe({
       next: (response) => {
         if (response.length >= 1) {
           this.toastr.warning('Account with this email already exists', 'User already exists');
         } else {
-          this.registerService.registerUser(userData as RegisterPostData).subscribe({
+          this.authService.registerUser(userData as RegisterPostData).subscribe({
             next: (response) => {
               this.toastr.success('Registered successfully', 'Success');
             },

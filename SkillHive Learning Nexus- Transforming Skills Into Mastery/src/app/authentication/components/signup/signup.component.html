@@ -1,6 +1,8 @@
+<app-header></app-header>
 <mat-card class="signupCard" appearance="outlined">
-  <mat-card-header>
-    <mat-card-title class="formTitle">SignUp</mat-card-title>
+  <mat-card-header class="formHeader">
+    <mat-card-title class="formTitle">Get Started With SKILL HIVE</mat-card-title>
+    <div><h5 class="formSubTitle">Getting started is easy</h5></div>
   </mat-card-header>
   <mat-card-content>
     <form
@@ -39,7 +41,7 @@
           [type]="hidePassword() ? 'password' : 'text'"
           formControlName="password"
         />
-        <mat-icon (click)="passwordClick($event)">{{
+        <mat-icon (click)="passwordClick($event)" class="hideIcon">{{
           hidePassword() ? "visibility_off" : "visibility"
         }}</mat-icon>
         @if (signupForm.get('password').hasError('required')) {
@@ -54,7 +56,7 @@
           [type]="hideConfirmPassword() ? 'password' : 'text'"
           formControlName="confirmPassword"
         />
-        <mat-icon (click)="confirmPasswordClick($event)">{{
+        <mat-icon (click)="confirmPasswordClick($event)" class="hideIcon">{{
           hideConfirmPassword() ? "visibility_off" : "visibility"
         }}</mat-icon>
       </mat-form-field>
@@ -72,14 +74,15 @@
         [disabled]="signupForm.invalid"
         class="signupBtn"
       >
-        SignUp
+        Sign up
       </button>
     </form>
   </mat-card-content>
 
   <mat-card-actions>
     <div class="loginRedirect">
-      Already a member? <a routerLink="/login" class="">LogIn</a>
+      Already a member? <a routerLink="/login" class="">Sign in</a>
     </div>
   </mat-card-actions>
 </mat-card>
+<app-footer></app-footer>

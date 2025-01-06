@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RegisterPostData, User } from '../../interfaces/auth';
+import { RegisterPostData, User, email } from '../../interfaces/auth';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,7 +12,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   registerUser(userData: RegisterPostData) {
-    return this.http.post(`${this.baseUrl}/candidate`, userData);
+    return this.http.post(`${this.baseUrl}/users`, userData);
+  }
+
+  addUserToNewsletter(userEmail: email) {
+    return this.http.post(`${this.baseUrl}/newsletteremails`, userEmail);
   }
 
   getUserDetails(email: string, password: string, user: string): Observable<User[]> {
@@ -31,9 +35,9 @@ export class AuthService {
     return details;
   }
 
-  userAlreadyPresent(email: string, user: string): Observable<User[]> {
+  userAlreadyPresent(email: string): Observable<User[]> {
     return this.http.get<User[]>(
-      `${this.baseUrl}/${user}?email=${email}`
+      `${this.baseUrl}/users?email=${email}`
     );
   }
 
