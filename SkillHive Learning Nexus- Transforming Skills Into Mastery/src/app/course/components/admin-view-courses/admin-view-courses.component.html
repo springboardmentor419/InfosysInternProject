@@ -1,11 +1,18 @@
-
 <h2>View Courses</h2>
 <div>
   <label for="filterInstructor">Filter by Instructor:</label>
-  <input id="filterInstructor" [(ngModel)]="filterInstructor" placeholder="Enter instructor name" />
+  <input
+    id="filterInstructor"
+    [(ngModel)]="filterInstructor"
+    placeholder="Enter instructor name"
+  />
 
   <label for="filterTechnology">Filter by Technology:</label>
-  <input id="filterTechnology" [(ngModel)]="filterTechnology" placeholder="Enter technology" />
+  <input
+    id="filterTechnology"
+    [(ngModel)]="filterTechnology"
+    placeholder="Enter technology"
+  />
 
   <label for="filterStatus">Filter by Status:</label>
   <select id="filterStatus" [(ngModel)]="filterStatus">
@@ -48,26 +55,58 @@
   <h3>Edit Course</h3>
   <form (ngSubmit)="updateCourse()">
     <label for="name">Course Name:</label>
-    <input id="name" [(ngModel)]="selectedCourse.name" name="name" required />
+    <input
+      id="name"
+      [(ngModel)]="selectedCourse.name"
+      name="name"
+      required
+    />
 
     <label for="startDate">Start Date:</label>
-    <input id="startDate" [(ngModel)]="selectedCourse.startDate" name="startDate" required />
+    <input
+      type="date"
+      id="startDate"
+      [(ngModel)]="selectedCourse.startDate"
+      name="startDate"
+      required
+    />
 
     <label for="endDate">End Date:</label>
-    <input id="endDate" [(ngModel)]="selectedCourse.endDate" name="endDate" required />
+    <input
+      type="date"
+      id="endDate"
+      [(ngModel)]="selectedCourse.endDate"
+      name="endDate"
+      required
+    />
 
     <label for="technology">Technology:</label>
-    <input id="technology" [(ngModel)]="selectedCourse.technology" name="technology" required />
+    <input
+      id="technology"
+      [(ngModel)]="selectedCourse.technology"
+      name="technology"
+      required
+    />
 
     <label for="status">Status:</label>
-    <select id="status" [(ngModel)]="selectedCourse.status" name="status" required>
+    <select
+      id="status"
+      [(ngModel)]="selectedCourse.status"
+      name="status"
+      required
+    >
       <option value="Ongoing">Ongoing</option>
       <option value="Upcoming">Upcoming</option>
       <option value="Past">Past</option>
     </select>
 
     <label for="instructor">Instructor:</label>
-    <input id="instructor" [(ngModel)]="selectedCourse.instructor" name="instructor" required />
+    <input
+      id="instructor"
+      [(ngModel)]="selectedCourse.instructor"
+      name="instructor"
+      required
+    />
 
     <button type="submit">Update</button>
     <button type="button" (click)="cancelEdit()">Cancel</button>
