@@ -1,50 +1,112 @@
 <body>
-  <header class="header">
-    <div class="logo">SkillHive</div>
-    <nav>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Enroll Now</a></li>
-      </ul>
-    </nav>
-  </header>
+  <app-header></app-header>
 
   <main class="main-content">
     <section class="welcome-section">
-      <h2>Hello, Candidate Name</h2>
+      <img [src]="userProfile || 'assets/default-profile.png'" alt="User Profile">
+      <h2>Hello,{{ candidateName || 'Candidate' }}</h2>
     </section>
+
 
     <section class="card-container">
       <div class="card">
+        <i class="fas fa-chalkboard-teacher"></i>
         <h3>📚 Enroll Course</h3>
         <p>Join the course of your choice and enhance your skills.</p>
         <button>Get Started</button>
       </div>
       <div class="card">
+        <i class="fas fa-user-edit"></i>
         <h3>👤 Manage Profile</h3>
         <p>Update your information and preferences.</p>
         <button [routerLink]="['/update-profile']">Edit Profile</button>
       </div>
       <div class="card">
+        <i class="fas fa-user-edit"></i>
+        <h3>👤 Additional Details</h3>
+        <p>Update your additional details.</p>
+        <button [routerLink]="['/register']">Edit Profile</button>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
         <h3>📈 Track Course</h3>
         <p>Monitor your progress and stay on track.</p>
         <button>View Progress</button>
       </div>
     </section>
+    <section class="course-section">
+      <div class="section-header">
+        <h2>Trending Courses</h2>
+      </div>
+      <div class="courses-layout">
+        <!-- Left Side Section -->
+        <div class="left-side">
+          <div class="left-card">
+            <h3>🌟 Recommended for You</h3>
+            <p>Discover personalized courses based on your interests.</p>
+            <button>Explore Courses</button>
+          </div>
+        </div>
+    
+        <!-- Main Course Cards -->
+        <div class="course-card-container">
+          <div class="course-card">
+            <h3>🎨 Graphic Design Basics</h3>
+            <p>Learn the fundamentals of graphic design in this beginner course.</p>
+            <button [routerLink]="['/course-details/graphic-design']">Learn More</button>
+          </div>
+          <div class="course-card">
+            <h3>🖥 Web Development 101</h3>
+            <p>Get started with web development, from HTML to CSS basics.</p>
+            <button [routerLink]="['/course-details/web-development']">Learn More</button>
+          </div>
+        </div>
+    
+        <!-- Right Side Section -->
+        <div class="right-side">
+          <div class="right-card">
+            <h3>🛠 Skill Boosters</h3>
+            <p>Enhance your skills with these advanced courses.</p>
+            <button>View Skill Boosters</button>
+          </div>
+        </div>
+      </div>
+    
+      <a href="/courses" class="view-more">View More Courses</a>
+    </section>
+    
+    <div class="coupon-box">
+  <p class="promo-text">
+    Use our coupon <span class="highlighted-code">TEAM4AWESOME</span> and get access to all courses for FREE for 14 days!
+  </p>
+  <button class="copy-button" onclick="copyCouponCode()">Copy Code</button>
+</div>
 
-    <section class="upload-section">
-      <h2>Upload Files</h2>
-      <p>Upload your assignments or project files here.</p>
-      <form>
-        <label for="fileUpload">Choose a file</label>
-        <input type="file" id="fileUpload" (change)="onFileSelected($event)" />
-        <button type="button" (click)="onUpload()">Upload</button>
-      </form>
+    
+    <section class="course-section">
+      <h2>Explore Courses</h2>
+      <div class="course-card-container">
+        <div class="course-card">
+          <h3>📚 Available Courses</h3>
+          <p>Browse through the courses available to you.</p>
+          <button [routerLink]="['/available-courses']">View Available Courses</button>
+        </div>
+        <div class="course-card">
+          <h3>📝 Enrolled Courses</h3>
+          <p>Check the courses you're enrolled in and track progress.</p>
+          <button [routerLink]="['/enrolled-courses']">View Enrolled Courses</button>
+        </div>
+      </div>
+<!-- Add Logout Button -->
+<section class="logout-section">
+  <button class="btn-logout" (click)="logout()">Logout</button>
+</section>
+
+      
+    </section>
+
+    <section>
+      <app-footer></app-footer>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>&copy; 2024 SkillHive. All rights reserved.</p>
-  </footer>
 </body>

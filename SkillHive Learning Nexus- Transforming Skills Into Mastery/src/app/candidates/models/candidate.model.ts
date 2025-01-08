@@ -1,12 +1,18 @@
+// candidate.model.ts
 export interface Candidate {
-  id: number; // Add this
-  username: string;
+  id: string;
+  fullName: string;
   email: string;
+  password: string;
+}
+
+export interface AdditionalDetails {
+  profilePicture: string;
+email:string;
   phoneNumber: string;
   location: string;
-  specialization: string;
   companyName: string;
-  gender: string;
   status: string;
-  password: string;
+  specialization: string;
+  gender: string;
 }

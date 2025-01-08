@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CandidateService } from '../../services/candidate.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { HeaderComponent } from '../header/header.component'; 
+import { FooterComponent } from '../footer/footer.component'; 
 @Component({
   selector: 'app-candidate-login',
   standalone: true,
   templateUrl: './candidate-login.component.html',
   styleUrls: ['./candidate-login.component.css'],
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule,HeaderComponent,FooterComponent],
 })
-export class CandidateLoginComponent {
+export class CandidateLoginComponent implements OnInit{
   email: string = '';
   password: string = '';
   showPassword: boolean = false;
@@ -22,6 +23,11 @@ export class CandidateLoginComponent {
     private candidateService: CandidateService,
     private router: Router
   ) {}
+  ngOnInit() {
+    if (localStorage.getItem('candidateEmail')) {
+      this.router.navigate(['/dashboard'])
+    }
+  }
 
   onLogin() {
     if (!this.email.trim() && !this.password.trim()) {
@@ -37,15 +43,14 @@ export class CandidateLoginComponent {
       return;
     }
 
-    // Call the loginCandidate service and then proceed with the AuthService login
     this.candidateService.loginCandidate(this.email.trim(), this.password.trim()).subscribe({
       next: (response) => {
         if (response.length > 0) {
-          // Assuming response contains user data (like username)
-          const user = response[0]; // Adjust according to the actual response structure
-          
+          const user = response[0]; 
           this.successMessage = '200 (OK) Login successful!!!';
           alert(this.successMessage);
+          localStorage.setItem('loggedIn', 'true');
+          localStorage.setItem('candidateName', user.fullName);
           this.router.navigate(['/dashboard']);
         } else {
           this.errorMessage = '401 (Unauthorized) Invalid username or password.';
@@ -57,7 +62,6 @@ export class CandidateLoginComponent {
       },
     });
   }
-
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }

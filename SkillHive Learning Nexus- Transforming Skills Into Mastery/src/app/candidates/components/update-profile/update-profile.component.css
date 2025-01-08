@@ -13,18 +13,22 @@ html, body {
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    background: linear-gradient(to bottom, #4cb5f5, #ffffff); /* Background gradient */
-    min-height: 100vh;
-    overflow-y:auto;
-}
+    
+    background:seashell;
+    
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%), 
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+    background-size: 30px 30px; /* Mesh grid size */}
 
 .update-profile {
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 100px;
     width: 100%;
     max-width: 500px;
     text-align: center;
@@ -33,7 +37,7 @@ body {
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #333;
+    color: #000; /* Violet for headings */
 }
 
 form {
@@ -45,8 +49,16 @@ form {
 label {
     font-size: 1em;
     font-weight: 600;
-    color: #333;
+    color: #000; 
     text-align: left;
+}
+
+.user-img{
+    width: 200px;height: 200px;background-size: contain;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
 }
 
 input, select {
@@ -55,18 +67,19 @@ input, select {
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1em;
+    background: #fff;
+    color: #000; 
 }
-
 input:focus, select:focus {
-    border-color: #007bff;
+    border-color: #7A3BB7; 
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 0 5px rgba(122, 59, 183, 0.3);
 }
 
 button {
     padding: 15px;
-    background-color: #007bff;
-    color: white;
+    background-color: #9C4DF4; 
+    color: #FFFFFF; 
     font-size: 1.1em;
     font-weight: bold;
     border-radius: 5px;
@@ -76,8 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
-}
+    background-color: #9C4DF4; }
 
 button[disabled] {
     background-color: #ccc;
@@ -105,10 +117,11 @@ p {
     margin-top: 20px;
     font-size: 0.9em;
     text-align: center;
+    color: black; 
 }
 
 a {
-    color: #007bff;
+    color: #7A3BB7;
     text-decoration: none;
 }
 
@@ -131,9 +144,18 @@ a:hover {
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 1.2em;
-    color: #555;
+    color: #7A3BB7; 
 }
 
 .toggle-password:hover {
-    color: #007bff;
+    color: #5A2D90; 
 }
+
+
+input[readonly] {
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ccc;   /* Border styling */
+    color: #666;             /* Text color */
+    cursor: not-allowed;     /* Change cursor to indicate non-editable */
+  }
+  
