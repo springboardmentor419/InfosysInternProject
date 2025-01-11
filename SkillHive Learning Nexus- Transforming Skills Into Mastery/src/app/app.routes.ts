@@ -7,6 +7,7 @@ import { HomeComponent } from './authentication/components/home/home.component';
 import { ContactComponent } from './authentication/components/contact/contact.component';
 import { AboutusComponent } from './authentication/components/aboutus/aboutus.component';
 import { changePassword } from './authentication/components/changepassword/changepassword.component';
+import { InstructorComponent } from './authentication/components/instructor/instructor.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -16,5 +17,5 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'about', component: AboutusComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'instructor', component: InstructorComponent },
 ];

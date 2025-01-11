@@ -17,5 +17,9 @@ export class HeaderComponent {
   signUp() {
     this.router.navigate(['signup']);
   }
+
+  applyAsInstructor(){
+    this.router.navigate(['instructor']);
+  }
 }
 
