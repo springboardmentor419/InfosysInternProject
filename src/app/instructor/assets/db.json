@@ -13,29 +13,23 @@
       "daysAvailable": "5",
       "hoursAvailable": "",
       "resume": null
+    },
+    {
+      "id": "a98c",
+      "fullName": "Shraddha",
+      "contactNumber": "6207943758",
+      "email": "shraddhanandpandey1729@gmail.com",
+      "experience": 2,
+      "teachingDomain": "Web Development",
+      "specialization": "Algebra",
+      "degree": "b.tech",
+      "certifications": "java",
+      "daysAvailable": "365",
+      "hoursAvailable": "",
+      "resume": null
     }
   ],
   "instructorDetails": [
-    {
-      "id": "e9a2",
-      "fullName": "john",
-      "teachingDomain": "Mathematics",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4.5
-    },
-    {
-      "id": "f168",
-      "fullName": "brijesh rao",
-      "teachingDomain": "Web Development",
-      "upcoming_courses": "Angular complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4.5
-    },
     {
       "id": "2c6e",
       "fullName": "sumit",
@@ -149,16 +143,6 @@
     {
       "id": "4e9a",
       "fullName": "Shraddha",
-      "teachingDomain": "Web Development",
-      "upcoming_courses": "Angular Complete Guide",
-      "start_date": "24-12-23",
-      "end_date": "24-10-14",
-      "candidateEnrolled": 47,
-      "instructorRating": 4.5
-    },
-    {
-      "id": "e510",
-      "fullName": "brijesh rao",
       "teachingDomain": "Web Development",
       "upcoming_courses": "Angular Complete Guide",
       "start_date": "24-12-23",
@@ -550,6 +534,56 @@
       "id": "2446",
       "fullName": "Shraddha",
       "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular Complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "a0d7",
+      "fullName": "Shraddha",
+      "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular Complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "8846",
+      "fullName": "Shraddha",
+      "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular Complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "e623",
+      "fullName": "Shraddha",
+      "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular Complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "948e",
+      "fullName": "Shraddha",
+      "teachingDomain": "AI ML",
+      "upcoming_courses": "Angular Complete Guide",
+      "start_date": "24-12-23",
+      "end_date": "24-10-14",
+      "candidateEnrolled": 47,
+      "instructorRating": 4.5
+    },
+    {
+      "id": "e174",
+      "fullName": "Shraddha",
+      "teachingDomain": "Web Development",
       "upcoming_courses": "Angular Complete Guide",
       "start_date": "24-12-23",
       "end_date": "24-10-14",
